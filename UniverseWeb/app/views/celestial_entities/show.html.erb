@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @celestial_entity.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @celestial_entity.description %>
+</p>
+
+<p>
+  <b>Mass:</b>
+  <%= @celestial_entity.mass %>
+</p>
+
+<p>
+  <b>Orbit:</b>
+  <%= @celestial_entity.orbit %>
+</p>
+
+<p>
+  <b>Rotation:</b>
+  <%= @celestial_entity.rotation %>
+</p>
+
+
+<%= link_to 'Edit', edit_celestial_entity_path(@celestial_entity) %> |
+<%= link_to 'Back', celestial_entities_path %>
