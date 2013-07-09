@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<h1>
   <%= @celestial_entity.name %>
-</p>
+</h1>
+<%= image_tag 'celestial_entities/' + @celestial_entity.name + '.jpg' %>
 
 <p>
   <b>Description:</b>
@@ -26,5 +26,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_celestial_entity_path(@celestial_entity) %> |
-<%= link_to 'Back', celestial_entities_path %>
+<!--<%= link_to 'Edit', edit_celestial_entity_path(@celestial_entity) %> -->
+<%= link_to 'All Celestial Entities', celestial_entities_path %>

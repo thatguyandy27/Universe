@@ -1,0 +1,32 @@
+body
+{
+    background-color:black;
+    color:white;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+}
+
+#navMenu
+{
+    height:50px;
+    margin:-8px;
+    background-color: blue;
+}
+
+.menu
+{
+    display:inline-block;
+}
+
+.menu li
+{
+    display:none;
+}
+
+
+.thumbnail
+{
+    width:300px;
+    cursor:pointer;
+}
+

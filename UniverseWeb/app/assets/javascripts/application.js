@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require menu.js
 
 //= require knockout-2.1.0.js

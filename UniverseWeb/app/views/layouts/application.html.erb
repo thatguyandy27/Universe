@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div id='navMenu'>
+        <ul class='menu'>
+            Objects
+            <li onclick='window.open("<%= url_for('celestial_entities') %>");' >All</li>
+        </ul>
+        <ul class='menu' onclick='window.open("<%= url_for('about') %>");'>About
+        </ul>
+    </div>
 
 <%= yield %>
 

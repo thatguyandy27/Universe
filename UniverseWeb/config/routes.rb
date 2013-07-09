@@ -1,5 +1,13 @@
 UniverseWeb::Application.routes.draw do
+  resources :entity_subtypes
+
+
+  resources :entity_types
+
+
   resources :celestial_entities
+  match 'about' => 'about#index'
+  match 'games/matching' => 'matching#index'
   root :to => 'root#index'
 
   # The priority is based upon order of creation:

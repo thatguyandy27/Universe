@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620121010) do
+ActiveRecord::Schema.define(:version => 20130627124636) do
 
   create_table "celestial_entities", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,27 @@ ActiveRecord::Schema.define(:version => 20130620121010) do
     t.integer  "mass"
     t.integer  "orbit"
     t.integer  "rotation"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "radius"
+    t.float    "volume"
+    t.float    "density"
+    t.float    "gravity"
+    t.integer  "parent_id"
+    t.integer  "entity_subtypeid"
+  end
+
+  create_table "entity_subtypes", :force => true do |t|
+    t.string   "name"
+    t.integer  "entity_typeid"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "entity_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
