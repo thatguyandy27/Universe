@@ -2,8 +2,16 @@ class CelestialEntitiesController < ApplicationController
   # GET /celestial_entities
   # GET /celestial_entities.json
   def index
-    @celestial_entities = CelestialEntity.all
+    @celestial_entities = nil
+    
+    if params['entity_typeid']
+      @celestial_entities = CelestialEntity.joins(:entity_subtype).where('entity_typeid = ?', params['entity_typeid'])
+    else
+      @celestial_entities = CelestialEntity.all
 
+    end
+    
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @celestial_entities }
